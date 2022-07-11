@@ -1,23 +1,57 @@
 package linkedlist;
 
 public class LinkedList {
-	public Node addNode(Node head, int data) {
+	Node head;
+	Node tail;
+	
+	public Node addNode(int data) {
 		Node newNode = new Node(data);
 		if(head == null) {
 			head = newNode;
+			tail = newNode;
 		}
-		  else if(head != null){
-	            Node temp = head;
-	            while(temp.next != null) {
-	                temp = temp.next;
-	            }
-	           
-	            temp.next = newNode;
+		else{
+	         Node temp = head;  
+	         this.head = newNode;
+	            newNode.next = temp;
 	        }
-	        return head;
+	        return newNode;
 	    
 	}
-	 public void printLinkedList(Node head) {
+	
+	public void appendNode(int data) {
+		Node newNode =new Node(data);
+		if(head == null) {
+			head = newNode;
+			tail = newNode;
+		}
+		else {
+			this.tail.next = newNode;
+			tail = newNode;
+		}
+	}
+	
+	public void insertBetween(Node prevNode, Node newNode) {
+		Node tempNode = prevNode.next;
+		prevNode.next = newNode;
+		newNode.next = tempNode;
+ 		
+	}
+	
+	public void pop() {
+		this.head = this.head.next;
+	}
+	
+	public void popLast()  {
+		Node tempNode = head;
+		while(!tempNode.next.equals(tail)) {
+			tempNode = tempNode.next;
+		}
+		this.tail = tempNode;
+		tempNode.next = null;
+	}
+	
+	 public void printLinkedList() {
 	        Node temp = head;
 	        if(temp == null) {
 	            System.out.println("LinkedList is empty");
