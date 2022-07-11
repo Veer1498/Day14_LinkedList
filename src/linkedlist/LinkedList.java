@@ -10,14 +10,12 @@ public class LinkedList {
 			head = newNode;
 			tail = newNode;
 		}
-		  else if(head != null){
-	            Node temp = head;
-	            while(temp.next != null) {
-	                temp = temp.next;
-	            }
-	            temp.next = newNode;
+		else{
+	         Node temp = head;  
+	         this.head = newNode;
+	            newNode.next = temp;
 	        }
-	        return head;
+	        return newNode;
 	    
 	}
 	
@@ -42,6 +40,15 @@ public class LinkedList {
 	
 	public void pop() {
 		this.head = this.head.next;
+	}
+	
+	public void popLast()  {
+		Node tempNode = head;
+		while(!tempNode.next.equals(tail)) {
+			tempNode = tempNode.next;
+		}
+		this.tail = tempNode;
+		tempNode.next = null;
 	}
 	
 	 public void printLinkedList() {

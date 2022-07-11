@@ -4,19 +4,20 @@ public class OperationsDoing {
 	
 	public static LinkedList addDataFirst() {
         LinkedList list = new LinkedList();
-		 	list.addNode(56);
+		 	list.addNode(70);
 	        list.addNode(30);
-	        list.addNode(70); 
+	        list.addNode(56); 
 	        list.printLinkedList();
 			return list;
 	}
 	
-	public static void addDataLast() {
+	public static LinkedList addDataLast() {
 		 LinkedList list = new LinkedList();
 		 	list.appendNode(70);
 	        list.appendNode(30);
 	        list.appendNode(56); 
 	        list.printLinkedList();
+			return list;
 	}
 	
 	public static void insertBtw() {
@@ -36,4 +37,11 @@ public class OperationsDoing {
 		 list.pop();
 		 list.printLinkedList();
 	}
+	
+	public static void deleteLastNode() {
+		 LinkedList list = addDataFirst();
+		 list.popLast();
+		 list.printLinkedList();
+	}
+
 }
