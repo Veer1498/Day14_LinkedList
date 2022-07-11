@@ -15,5 +15,17 @@ public class OperationsDoing {
 	        list.appendNode(70); 
 	        list.printLinkedList();
 	}
+	public static void insertBtw() {
+		 LinkedList list = new LinkedList();
+		 	Node secNode = list.addNode(70);
+		 	Node firNode = list.addNode(56);
+		 	Node newNode = new Node(30);
+		 	System.out.println("Before Insertion");
+	        list.printLinkedList();
+	        list.insertBetween(firNode, newNode);
+		 	System.out.println("After Insertion");
+	        list.printLinkedList();
+	}
+	
 
 }

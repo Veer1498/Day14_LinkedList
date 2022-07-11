@@ -6,7 +6,7 @@ public class Main {
 	 public static void main(String[] args) {
 		 Welcome();
 		 Scanner sc = new Scanner(System.in);
-		 System.out.println("Enter 1.Add 2.Append");
+		 System.out.println("Enter \n1.Add \n2.Append \n3.Insert Between");
 		 int n = sc.nextInt();
 		 switch(n) {
 		 case 1 :
@@ -14,6 +14,9 @@ public class Main {
 			 break;
 		 case 2 :
 			 OperationsDoing.addDataLast();
+			 break;
+		 case 3 :
+			 OperationsDoing.insertBtw();
 			 break;
 		 }
 	 }

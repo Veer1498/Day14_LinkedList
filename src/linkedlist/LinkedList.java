@@ -19,6 +19,7 @@ public class LinkedList {
 	        return head;
 	    
 	}
+	
 	public void appendNode(int data) {
 		Node newNode =new Node(data);
 		if(head == null) {
@@ -29,6 +30,12 @@ public class LinkedList {
 			this.tail.next = newNode;
 			tail = newNode;
 		}
+	}
+	public void insertBetween(Node prevNode, Node newNode) {
+		Node tempNode = prevNode.next;
+		prevNode.next = newNode;
+		newNode.next = tempNode;
+ 		
 	}
 	 public void printLinkedList() {
 	        Node temp = head;
