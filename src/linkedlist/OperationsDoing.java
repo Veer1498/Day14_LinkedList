@@ -1,20 +1,24 @@
 package linkedlist;
 
 public class OperationsDoing {
-	public static void addDataFirst() {
+	
+	public static LinkedList addDataFirst() {
         LinkedList list = new LinkedList();
-		 	list.addNode(70);
+		 	list.addNode(56);
 	        list.addNode(30);
-	        list.addNode(56); 
+	        list.addNode(70); 
 	        list.printLinkedList();
+			return list;
 	}
+	
 	public static void addDataLast() {
 		 LinkedList list = new LinkedList();
-		 	list.appendNode(56);
+		 	list.appendNode(70);
 	        list.appendNode(30);
-	        list.appendNode(70); 
+	        list.appendNode(56); 
 	        list.printLinkedList();
 	}
+	
 	public static void insertBtw() {
 		 LinkedList list = new LinkedList();
 		 	Node secNode = list.addNode(70);
@@ -27,5 +31,9 @@ public class OperationsDoing {
 	        list.printLinkedList();
 	}
 	
-
+	public static void deleteFirstNode() {
+		 LinkedList list = addDataFirst();
+		 list.pop();
+		 list.printLinkedList();
+	}
 }

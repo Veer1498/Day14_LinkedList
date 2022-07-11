@@ -3,6 +3,7 @@ package linkedlist;
 public class LinkedList {
 	Node head;
 	Node tail;
+	
 	public Node addNode(int data) {
 		Node newNode = new Node(data);
 		if(head == null) {
@@ -31,12 +32,18 @@ public class LinkedList {
 			tail = newNode;
 		}
 	}
+	
 	public void insertBetween(Node prevNode, Node newNode) {
 		Node tempNode = prevNode.next;
 		prevNode.next = newNode;
 		newNode.next = tempNode;
  		
 	}
+	
+	public void pop() {
+		this.head = this.head.next;
+	}
+	
 	 public void printLinkedList() {
 	        Node temp = head;
 	        if(temp == null) {
