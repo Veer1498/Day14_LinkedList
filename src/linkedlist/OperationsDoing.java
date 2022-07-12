@@ -21,7 +21,7 @@ public class OperationsDoing {
 		 	list.addNode(70);
 	        list.addNode(30);
 	        list.addNode(56); 
-	        System.out.print("The data Inserted in Linked List is :");
+	        System.out.print("The data Inserted in Linked List is : ");
 	        list.printLinkedList();
 			return list;
 	}
@@ -82,5 +82,16 @@ public class OperationsDoing {
 		LinkedList linkedList = addDataFirst();
 		linkedList.search(30);
 	}
+	
+	// Search and Insert
+	public static void findNodeInsert() {
+		LinkedList linkedList = addDataFirst();
+		Node newNode =new Node(40);
+		Node prvNode = linkedList.searchInsert(30, newNode);
+		System.out.print("Newly Added data in List : ");
+		linkedList.printLinkedList();
+		
+	}
+	
 
 }

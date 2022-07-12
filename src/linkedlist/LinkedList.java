@@ -117,6 +117,26 @@ public class LinkedList {
 			 System.out.println("Element is Not Present");
 		 }
 	 }
+	 
+	 //Search Node and Insert there
+	 public Node searchInsert(int value, Node newNode) {
+		 Node tempNode = head;
+		 if(head == null) {
+			 System.out.println("List is Empty");
+		 }
+		 else {
+			 while(tempNode != null) {
+				 if(tempNode.data == value) {
+					 break;
+				 }
+				 tempNode = tempNode.next;
+			 }
+			 Node tempNodeNext = tempNode.next;
+			 	  tempNode.next = newNode;
+				newNode.next = tempNodeNext;
+		 }
+		return tempNode;
+	 }
 	
 
 }
