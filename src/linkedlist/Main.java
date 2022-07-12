@@ -20,7 +20,8 @@ public class Main {
 		 Welcome();
 		 Scanner sc = new Scanner(System.in);
 		 System.out.println("Enter \n1.Add \n2.Append \n3.Insert Between"
-		 					+ " \n4.Delete FirstNode \n5.Delete LastNode");
+		 					+ " \n4.Delete FirstNode \n5.Delete LastNode"
+		 					+ "\n6.Find Node by Value Given");
 		 int n = sc.nextInt();
 		 switch(n) {
 		 case 1 :
@@ -37,6 +38,9 @@ public class Main {
 			 break;
 		 case 5 :
 			 OperationsDoing.deleteLastNode();
+			 break;
+		 case 6 :
+			 OperationsDoing.findNode();
 			 break;
 		 }
 	 }

@@ -91,7 +91,32 @@ public class LinkedList {
 	            }
 	            System.out.println(temp.data);
 	        }
-	    }
+	   }
+	 //Search Method
+	 public void search(int value) {
+		 Node tempNode = head;
+		 int index = 1;
+		 boolean flag = false;
+		 if(head == null) {
+			 System.out.println("List is Empty");
+		 }
+		 else {
+			 while(tempNode != null) {
+				 if(tempNode.data == value) {
+					 flag = true;
+					 break;
+				 }
+				 index++;
+				 tempNode = tempNode.next;
+			 }
+		 }
+		 if(flag == true) {
+			 System.out.println("Value : "+value+" is present at index : "+index);
+		 }
+		 else {
+			 System.out.println("Element is Not Present");
+		 }
+	 }
 	
 
 }
