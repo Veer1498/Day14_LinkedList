@@ -84,11 +84,21 @@ public class OperationsDoing {
 	}
 	
 	// Search and Insert
-	public static void findNodeInsert() {
+	public static LinkedList findNodeInsert() {
 		LinkedList linkedList = addDataFirst();
 		Node newNode =new Node(40);
 		Node prvNode = linkedList.searchInsert(30, newNode);
 		System.out.print("Newly Added data in List : ");
+		linkedList.printLinkedList();
+		return linkedList;
+		
+	}
+	
+	// Search and Delete and Show size
+	public static void findNodeDeleteShowSize() {
+		LinkedList linkedList = findNodeInsert();
+		System.out.print("Updated List after Deleted item in List : ");
+		linkedList.deleteANode(40);
 		linkedList.printLinkedList();
 		
 	}

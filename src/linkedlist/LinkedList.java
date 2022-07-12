@@ -137,6 +137,21 @@ public class LinkedList {
 		 }
 		return tempNode;
 	 }
+	 
+	 //Delete item in Linked List and Show size
+	 public void deleteANode(int value) {
+		 if(this.head == null) {
+			 System.out.println("List is Empty");
+			 return;
+		 }
+		Node tempNode = head;
+		while(tempNode.next.data != value) {
+			tempNode = tempNode.next;
+		}
+		Node prvNode = tempNode;
+		Node nextNode = tempNode.next.next;
+		prvNode.next = nextNode;
+	 }
 	
 
 }

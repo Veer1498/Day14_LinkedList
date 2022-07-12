@@ -21,7 +21,8 @@ public class Main {
 		 Scanner sc = new Scanner(System.in);
 		 System.out.println("Enter \n1.Add \n2.Append \n3.Insert Between"
 		 					+ " \n4.Delete FirstNode \n5.Delete LastNode"
-		 					+ "\n6.Find Node by Value Given \n7.Search and Insert");
+		 					+ "\n6.Find Node by Value Given \n7.Search and Insert"
+		 					+ "\n8.Search and Delete a Node");
 		 int n = sc.nextInt();
 		 switch(n) {
 		 case 1 :
@@ -44,6 +45,8 @@ public class Main {
 			 break;
 		 case 7 :
 			 OperationsDoing.findNodeInsert();
+		 case 8 :
+			 OperationsDoing.findNodeDeleteShowSize();
 		 }
 	 }
 	 
