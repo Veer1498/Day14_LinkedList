@@ -1,8 +1,22 @@
 package linkedlist;
-
+/**
+ * 
+ * @author singa
+ *
+ */
 public class OperationsDoing {
-	
+	/**
+	 * 
+	 * @return- list data.
+	 */
+	//Add Data at First Method
 	public static LinkedList addDataFirst() {
+		/*
+		 * Calling the Methods from LinkedList Class
+		 * inserting data one by one in add Data Method
+		 * print the list
+		 * return the list values for further use
+		 */
         LinkedList list = new LinkedList();
 		 	list.addNode(70);
 	        list.addNode(30);
@@ -11,7 +25,14 @@ public class OperationsDoing {
 			return list;
 	}
 	
+	//Add Data at Last Method
 	public static LinkedList addDataLast() {
+		/*
+		 * Calling the Methods from LinkedList Class
+		 * inserting data one by one in append Node Method
+		 * print the list
+		 * return the list values for further use
+		 */
 		 LinkedList list = new LinkedList();
 		 	list.appendNode(70);
 	        list.appendNode(30);
@@ -20,7 +41,15 @@ public class OperationsDoing {
 			return list;
 	}
 	
+	//Insert Between Two Numbers Method
 	public static void insertBtw() {
+		/*
+		 * Calling the Methods from LinkedList Class
+		 * inserting data one by one in addNode Method
+		 * print the list
+		 * return the list values for further use
+		 * 
+		 */
 		 LinkedList list = new LinkedList();
 		 	Node secNode = list.addNode(70);
 		 	Node firNode = list.addNode(56);
@@ -32,12 +61,15 @@ public class OperationsDoing {
 	        list.printLinkedList();
 	}
 	
+	//Delete First Node Method
+	
 	public static void deleteFirstNode() {
 		 LinkedList list = addDataFirst();
 		 list.pop();
 		 list.printLinkedList();
 	}
 	
+	// Delete Last Node Method
 	public static void deleteLastNode() {
 		 LinkedList list = addDataFirst();
 		 list.popLast();
