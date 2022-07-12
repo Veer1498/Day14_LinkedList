@@ -1,9 +1,22 @@
 package linkedlist;
-
 import java.util.Scanner;
-
+/**
+ * 
+ * LinkedList Program
+ * @author Veer.singa
+ *
+ */
 public class Main {
+	/*
+	 * This is the Main Class of the Whole Linked List Program
+	 */
 	 public static void main(String[] args) {
+		 /*
+		  * Called Welcome Method
+		  * Took Scanner to select which method to Perform
+		  * Calling all Methods Created in Operations.
+		  * 
+		  */
 		 Welcome();
 		 Scanner sc = new Scanner(System.in);
 		 System.out.println("Enter \n1.Add \n2.Append \n3.Insert Between"
@@ -28,6 +41,7 @@ public class Main {
 		 }
 	 }
 	 
+	 //Welcome method
 	 public static void Welcome() {
 		 System.out.println("Welcome to the Linkedlist Program");
 	 }
