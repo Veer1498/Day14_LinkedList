@@ -21,6 +21,7 @@ public class OperationsDoing {
 		 	list.addNode(70);
 	        list.addNode(30);
 	        list.addNode(56); 
+	        System.out.print("The data Inserted in Linked List is : ");
 	        list.printLinkedList();
 			return list;
 	}
@@ -75,5 +76,32 @@ public class OperationsDoing {
 		 list.popLast();
 		 list.printLinkedList();
 	}
+	
+	//Search Node based on value inserted
+	public static void findNode() {
+		LinkedList linkedList = addDataFirst();
+		linkedList.search(30);
+	}
+	
+	// Search and Insert
+	public static LinkedList findNodeInsert() {
+		LinkedList linkedList = addDataFirst();
+		Node newNode =new Node(40);
+		Node prvNode = linkedList.searchInsert(30, newNode);
+		System.out.print("Newly Added data in List : ");
+		linkedList.printLinkedList();
+		return linkedList;
+		
+	}
+	
+	// Search and Delete and Show size
+	public static void findNodeDeleteShowSize() {
+		LinkedList linkedList = findNodeInsert();
+		System.out.print("Updated List after Deleted item in List : ");
+		linkedList.deleteANode(40);
+		linkedList.printLinkedList();
+		
+	}
+	
 
 }

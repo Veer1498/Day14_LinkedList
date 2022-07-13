@@ -91,7 +91,67 @@ public class LinkedList {
 	            }
 	            System.out.println(temp.data);
 	        }
-	    }
+	   }
+	 //Search Method
+	 public void search(int value) {
+		 Node tempNode = head;
+		 int index = 1;
+		 boolean flag = false;
+		 if(head == null) {
+			 System.out.println("List is Empty");
+		 }
+		 else {
+			 while(tempNode != null) {
+				 if(tempNode.data == value) {
+					 flag = true;
+					 break;
+				 }
+				 index++;
+				 tempNode = tempNode.next;
+			 }
+		 }
+		 if(flag == true) {
+			 System.out.println("Value : "+value+" is present at index : "+index);
+		 }
+		 else {
+			 System.out.println("Element is Not Present");
+		 }
+	 }
+	 
+	 //Search Node and Insert there
+	 public Node searchInsert(int value, Node newNode) {
+		 Node tempNode = head;
+		 if(head == null) {
+			 System.out.println("List is Empty");
+		 }
+		 else {
+			 while(tempNode != null) {
+				 if(tempNode.data == value) {
+					 break;
+				 }
+				 tempNode = tempNode.next;
+			 }
+			 Node tempNodeNext = tempNode.next;
+			 	  tempNode.next = newNode;
+				newNode.next = tempNodeNext;
+		 }
+		return tempNode;
+	 }
+	 
+	 //Delete item in Linked List and Show size
+	 public void deleteANode(int value) {
+		 if(this.head == null) {
+			 System.out.println("List is Empty");
+			 return;
+		 }
+		Node tempNode = head;
+		while(tempNode.next.data != value) {
+			tempNode = tempNode.next;
+		}
+		Node prvNode = tempNode;
+		Node nextNode = tempNode.next.next;
+		prvNode.next = nextNode;
+	 }
 	
 
 }
